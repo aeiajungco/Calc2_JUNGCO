@@ -1,0 +1,27 @@
+<title>{{title}}</title>
+<br />
+<div class="calc">
+  <div class="form-outline">
+    <label class="form-label" for="typeText">Input 1st Number</label>
+    <input (input)="getFirst(num1.value)" type="text" #num1  class="form-control" />
+  </div>
+  <hr>
+
+  <div class="form-outline">
+    <label class="form-label" for="typeText">Input 2nd Number</label>
+    <input (input)="getSecond(num2.value)" type="text" #num2  class="form-control" />
+  </div>
+
+  <hr>
+  <button (click)="add()" type="button" id="add">+</button>
+  <button (click)="subtract()" type="button" id="subtract">-</button>
+  <button (click)="multiply()" type="button" id="multiply">*</button>
+  <button (click)="divide()" type="button" id="divide">/</button>
+
+  <br />
+  <hr>
+  <div *ngIf="result">
+    <h1><input [value]="answer" id="answer" type="text" disabled/></h1>
+  </div>
+  
+</div>
